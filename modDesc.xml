@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="92">
+    <author>TisonK</author>
+    <version>1.0.0.0</version>
+    <modName>FS25_TimeGuard</modName>
+
+    <title>
+        <en><![CDATA[Realistic Farming - Time Guard]]></en>
+        <de><![CDATA[Realistic Farming - Time Guard]]></de>
+        <fr><![CDATA[Realistic Farming - Time Guard]]></fr>
+        <nl><![CDATA[Realistic Farming - Time Guard]]></nl>
+        <it><![CDATA[Realistic Farming - Time Guard]]></it>
+        <pl><![CDATA[Realistic Farming - Time Guard]]></pl>
+        <es><![CDATA[Realistic Farming - Time Guard]]></es>
+        <ea><![CDATA[Realistic Farming - Time Guard]]></ea>
+        <pt><![CDATA[Realistic Farming - Time Guard]]></pt>
+        <br><![CDATA[Realistic Farming - Time Guard]]></br>
+        <ru><![CDATA[Realistic Farming - Time Guard]]></ru>
+        <uk><![CDATA[Realistic Farming - Time Guard]]></uk>
+        <cz><![CDATA[Realistic Farming - Time Guard]]></cz>
+        <hu><![CDATA[Realistic Farming - Time Guard]]></hu>
+        <ro><![CDATA[Realistic Farming - Time Guard]]></ro>
+        <tr><![CDATA[Realistic Farming - Time Guard]]></tr>
+        <fi><![CDATA[Realistic Farming - Time Guard]]></fi>
+        <no><![CDATA[Realistic Farming - Time Guard]]></no>
+        <sv><![CDATA[Realistic Farming - Time Guard]]></sv>
+        <da><![CDATA[Realistic Farming - Time Guard]]></da>
+        <kr><![CDATA[Realistic Farming - Time Guard]]></kr>
+        <jp><![CDATA[Realistic Farming - Time Guard]]></jp>
+        <ct><![CDATA[Realistic Farming - Time Guard]]></ct>
+        <fc><![CDATA[Realistic Farming - Time Guard]]></fc>
+        <id><![CDATA[Realistic Farming - Time Guard]]></id>
+        <vi><![CDATA[Realistic Farming - Time Guard]]></vi>
+    </title>
+
+    <description>
+        <en><![CDATA[Required library for the Realistic Farming mod ecosystem. Gives every economy mod one shared in-game calendar clock, so a game day, month and year carry the same economic weight on any save no matter the days-per-month setting. It never moves money itself; it only tells the other mods when to. No player settings, nothing to configure. Install it and let it run.]]></en>
+        <de><![CDATA[Erforderliche Bibliothek für das Realistic Farming Mod-Ökosystem. Gibt jedem Wirtschaftsmod eine gemeinsame Spielkalender-Uhr, damit ein Spieltag, Monat und Jahr auf jedem Spielstand dasselbe wirtschaftliche Gewicht haben, unabhängig von der Tage-pro-Monat-Einstellung. Sie bewegt selbst nie Geld; sie sagt den anderen Mods nur, wann. Keine Spielereinstellungen, nichts zu konfigurieren.]]></de>
+        <fr><![CDATA[Bibliothèque requise pour l'écosystème de mods Realistic Farming. Donne à chaque mod économique une horloge de calendrier de jeu partagée, afin qu'un jour, un mois et une année aient le même poids économique sur n'importe quelle sauvegarde, quel que soit le réglage des jours par mois. Elle ne déplace jamais d'argent elle-même ; elle indique seulement aux autres mods quand le faire. Aucun réglage de joueur.]]></fr>
+        <nl><![CDATA[Vereiste bibliotheek voor het Realistic Farming mod-ecosysteem. Geeft elke economiemod één gedeelde spelkalenderklok, zodat een speldag, maand en jaar op elke save hetzelfde economische gewicht hebben, ongeacht de dagen-per-maand-instelling. Zelf verplaatst het nooit geld; het vertelt de andere mods alleen wanneer. Geen spelerinstellingen.]]></nl>
+        <it><![CDATA[Libreria richiesta per l'ecosistema di mod Realistic Farming. Dà a ogni mod economico un unico orologio di calendario di gioco condiviso, così un giorno, un mese e un anno hanno lo stesso peso economico su qualsiasi salvataggio, indipendentemente dall'impostazione giorni-per-mese. Non sposta mai denaro da sé; dice solo agli altri mod quando farlo. Nessuna impostazione giocatore.]]></it>
+        <pl><![CDATA[Wymagana biblioteka dla ekosystemu modów Realistic Farming. Daje każdemu modowi ekonomicznemu jeden wspólny zegar kalendarza gry, dzięki czemu dzień, miesiąc i rok mają tę samą wagę ekonomiczną na każdym zapisie, niezależnie od ustawienia dni na miesiąc. Sama nigdy nie przenosi pieniędzy; mówi tylko innym modom, kiedy to zrobić. Brak ustawień gracza.]]></pl>
+        <es><![CDATA[Biblioteca requerida para el ecosistema de mods Realistic Farming. Da a cada mod de economía un único reloj de calendario de juego compartido, para que un día, un mes y un año tengan el mismo peso económico en cualquier partida, sin importar el ajuste de días por mes. Nunca mueve dinero por sí misma; solo indica a los demás mods cuándo hacerlo. Sin ajustes de jugador.]]></es>
+        <ea><![CDATA[Biblioteca requerida para el ecosistema de mods Realistic Farming. Da a cada mod de economía un único reloj de calendario de juego compartido, para que un día, un mes y un año tengan el mismo peso económico en cualquier partida, sin importar el ajuste de días por mes. Nunca mueve dinero por sí misma; solo indica a los demás mods cuándo hacerlo. Sin ajustes de jugador.]]></ea>
+        <pt><![CDATA[Biblioteca necessária para o ecossistema de mods Realistic Farming. Dá a cada mod de economia um único relógio de calendário de jogo compartilhado, para que um dia, mês e ano tenham o mesmo peso econômico em qualquer save, não importa o ajuste de dias por mês. Ela nunca move dinheiro sozinha; apenas diz aos outros mods quando fazê-lo. Sem configurações de jogador.]]></pt>
+        <br><![CDATA[Biblioteca necessária para o ecossistema de mods Realistic Farming. Dá a cada mod de economia um único relógio de calendário de jogo compartilhado, para que um dia, mês e ano tenham o mesmo peso econômico em qualquer save, não importa o ajuste de dias por mês. Ela nunca move dinheiro sozinha; apenas diz aos outros mods quando fazê-lo. Sem configurações de jogador.]]></br>
+        <ru><![CDATA[Необходимая библиотека для экосистемы модов Realistic Farming. Даёт каждому экономическому моду одни общие внутриигровые календарные часы, чтобы игровой день, месяц и год имели одинаковый экономический вес в любом сохранении, независимо от настройки дней в месяце. Сама она никогда не перемещает деньги; она лишь сообщает другим модам, когда это делать. Без настроек игрока.]]></ru>
+        <uk><![CDATA[Необхідна бібліотека для екосистеми модів Realistic Farming. Дає кожному економічному моду один спільний внутрішньоігровий календарний годинник, щоб ігровий день, місяць і рік мали однакову економічну вагу в будь-якому збереженні, незалежно від налаштування днів на місяць. Сама вона ніколи не переміщує гроші; вона лише повідомляє іншим модам, коли це робити. Без налаштувань гравця.]]></uk>
+        <cz><![CDATA[Vyžadovaná knihovna pro ekosystém modů Realistic Farming. Dává každému ekonomickému modu jedny sdílené herní kalendářní hodiny, takže herní den, měsíc a rok mají na jakémkoli uložení stejnou ekonomickou váhu bez ohledu na nastavení dní na měsíc. Sama nikdy nepřesouvá peníze; jen říká ostatním modům, kdy to udělat. Žádná nastavení hráče.]]></cz>
+        <hu><![CDATA[Szükséges könyvtár a Realistic Farming mod-ökoszisztémához. Minden gazdasági modnak egyetlen közös játékbeli naptáróra ad, így egy játéknap, hónap és év bármely mentésen ugyanazt a gazdasági súlyt hordozza, függetlenül a hónapnaponkénti beállítástól. Maga soha nem mozgat pénzt; csak megmondja a többi modnak, mikor tegyék. Nincs játékosbeállítás.]]></hu>
+        <ro><![CDATA[Bibliotecă necesară pentru ecosistemul de moduri Realistic Farming. Oferă fiecărui mod economic un singur ceas de calendar de joc partajat, astfel încât o zi, o lună și un an să aibă aceeași greutate economică pe orice salvare, indiferent de setarea zile pe lună. Nu mută niciodată banii singură; doar spune celorlalte moduri când să o facă. Fără setări de jucător.]]></ro>
+        <tr><![CDATA[Realistic Farming mod ekosistemi için gerekli kütüphane. Her ekonomi moduna tek bir paylaşılan oyun içi takvim saati verir, böylece bir oyun günü, ayı ve yılı, ayda gün ayarından bağımsız olarak her kayıtta aynı ekonomik ağırlığı taşır. Kendisi asla para taşımaz; yalnızca diğer modlara ne zaman yapacaklarını söyler. Oyuncu ayarı yok.]]></tr>
+        <fi><![CDATA[Realistic Farming -modiekosysteemin vaatima kirjasto. Antaa jokaiselle talousmodille yhden jaetun pelin kalenterikellon, joten pelipäivä, kuukausi ja vuosi kantavat saman taloudellisen painon jokaisessa tallennuksessa riippumatta päivää kuukaudessa -asetuksesta. Se ei koskaan siirrä rahaa itse; se vain kertoo muille modeille, milloin tehdä niin. Ei pelaaja-asetuksia.]]></fi>
+        <no><![CDATA[Nødvendig bibliotek for Realistic Farming-modøkosystemet. Gir hver økonomimod én delt kalenderklokke i spillet, slik at en spilldag, måned og år bærer samme økonomiske vekt på ethvert lagringspunkt uansett dager-per-måned-innstillingen. Den flytter aldri penger selv; den forteller bare de andre modene når. Ingen spillerinnstillinger.]]></no>
+        <sv><![CDATA[Obligatoriskt bibliotek för Realistic Farming-modekosystemet. Ger varje ekonomimod en enda delad spelkalenderklocka, så att en speldag, månad och år bär samma ekonomiska vikt på vilken sparfil som helst oavsett inställningen dagar per månad. Den flyttar aldrig pengar själv; den talar bara om för de andra modderna när. Inga spelarinställningar.]]></sv>
+        <da><![CDATA[Påkrævet bibliotek til Realistic Farming-mod-økosystemet. Giver hver økonomimod ét delt spilkalender-ur, så en spildag, måned og år bærer samme økonomiske vægt på enhver gemning uanset dage-per-måned-indstillingen. Den flytter aldrig penge selv; den fortæller kun de andre mods hvornår. Ingen spillerindstillinger.]]></da>
+        <kr><![CDATA[Realistic Farming 모드 생태계에 필요한 라이브러리입니다. 모든 경제 모드에 하나의 공유 게임 내 달력 시계를 제공하여, 월당 일수 설정과 관계없이 게임의 하루, 한 달, 일 년이 어떤 세이브에서도 동일한 경제적 무게를 갖도록 합니다. 스스로 돈을 옮기지 않으며, 다른 모드에 언제 해야 하는지 알려줄 뿐입니다. 플레이어 설정 없음.]]></kr>
+        <jp><![CDATA[Realistic Farming モッドエコシステムに必要なライブラリです。すべての経済モッドに1つの共有ゲーム内カレンダー時計を提供し、1か月あたりの日数設定に関係なく、ゲームの1日・1か月・1年がどのセーブでも同じ経済的重みを持つようにします。自身が金銭を動かすことはなく、他のモッドにいつ行うかを伝えるだけです。プレイヤー設定はありません。]]></jp>
+        <ct><![CDATA[Realistic Farming 模組生態系所需的函式庫。為每個經濟模組提供單一共用的遊戲內日曆時鐘，讓遊戲中的一天、一個月與一年在任何存檔上都具有相同的經濟權重，無論每月天數設定為何。它本身從不移動金錢，只告訴其他模組何時進行。無玩家設定。]]></ct>
+        <fc><![CDATA[Realistic Farming 模组生态系统所需的库。为每个经济模组提供单一共享的游戏内日历时钟，让游戏中的一天、一个月与一年在任何存档上都具有相同的经济权重，无论每月天数设置为何。它本身从不移动金钱，只告诉其他模组何时进行。无玩家设置。]]></fc>
+        <id><![CDATA[Pustaka yang diperlukan untuk ekosistem mod Realistic Farming. Memberi setiap mod ekonomi satu jam kalender dalam game bersama, sehingga satu hari, bulan, dan tahun game membawa bobot ekonomi yang sama pada save mana pun terlepas dari pengaturan hari per bulan. Ia tidak pernah memindahkan uang sendiri; ia hanya memberi tahu mod lain kapan harus melakukannya. Tanpa pengaturan pemain.]]></id>
+        <vi><![CDATA[Thư viện bắt buộc cho hệ sinh thái mod Realistic Farming. Cung cấp cho mọi mod kinh tế một đồng hồ lịch trong game dùng chung, để một ngày, tháng và năm trong game mang cùng trọng số kinh tế trên mọi bản lưu bất kể thiết lập số ngày mỗi tháng. Nó không bao giờ tự chuyển tiền; nó chỉ báo cho các mod khác biết khi nào. Không có cài đặt của người chơi.]]></vi>
+    </description>
+
+    <iconFilename>icon.dds</iconFilename>
+
+    <multiplayer supported="true"/>
+
+    <extraSourceFiles>
+        <sourceFile filename="main.lua" />
+    </extraSourceFiles>
+</modDesc>
