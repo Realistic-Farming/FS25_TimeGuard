@@ -8,7 +8,7 @@
 
 The economy mods (IncomeMod, TaxMod, WorkerCosts, FuelCosts, MarketDynamics, RandomWorldEvents) each used to hand-roll their own "has the day/month turned?" detector off the frame loop, only one respected the days-per-month setting, and their accrual basis was inconsistent. Time Guard replaces those private clocks with one:
 
-- It fires on the game's in-game calendar events (`MessageType.DAY_CHANGED` / `PERIOD_CHANGED` / `HOUR_CHANGED`) and republishes canonical economic ticks (`onEconomicHour` / `onEconomicDay` / `onEconomicMonth` / `onEconomicYear`) that every economic mod subscribes to.
+- It fires on the game's in-game calendar events (`MessageType.DAY_CHANGED` / `PERIOD_CHANGED` / `HOUR_CHANGED`) and republishes canonical economic ticks (`"hour"` / `"day"` / `"month"` / `"year"`) that every economic mod subscribes to via `subscribeTick` (see Public surface below).
 - It normalizes the days-per-month setting in ONE place, so a game month, and therefore a year, carries the same economic weight on any save.
 - It holds an accrue-and-settle scheduler that invokes each owning mod's settlement callback once, at the right calendar moment, idempotent across save/load.
 
