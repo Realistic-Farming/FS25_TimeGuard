@@ -52,6 +52,9 @@ function TimeGuard.new()
     self.enabled       = true
     self.synced        = false
     self.bedrockBound  = false
+    self.ledgerBound   = false
+    self.networkSyncBound = false
+    self.settingsHubBound = false
     self.messagesBound = false
     self.ledgerRestored = false
 
@@ -95,8 +98,13 @@ function TimeGuard:onMissionDelete()
         g_messageCenter:unsubscribeAll(self)
         self.messagesBound = false
     end
+    self.scheduler = TimeGuardScheduler.new(self)
     self.seeded       = false
     self.bedrockBound = false
+    self.ledgerBound  = false
+    self.networkSyncBound = false
+    self.settingsHubBound = false
+    self.ledgerRestored = false
     self.synced       = false
 end
 
@@ -337,6 +345,10 @@ function TimeGuard:registerAccrual(id, spec)
     return self.scheduler:registerAccrual(id, spec)
 end
 
+function TimeGuard:unregisterAccrual(id)
+    return self.scheduler:unregisterAccrual(id)
+end
+
 -- =========================================================
 -- Bedrock binding (delegate-when-present, idempotent)
 -- =========================================================
@@ -357,10 +369,9 @@ function TimeGuard:_bindBedrock()
     if self.bedrockBound then
         return
     end
-    local bound = false
 
     local ledger = self:_getLedger()
-    if ledger ~= nil then
+    if ledger ~= nil and not self.ledgerBound then
         ledger:registerModule(TimeGuard.LEDGER_MODULE, {
             serialize   = function() return self.scheduler:serializeCursors() end,
             deserialize = function(data)
@@ -368,21 +379,21 @@ function TimeGuard:_bindBedrock()
                 self.ledgerRestored = true
             end,
         })
-        bound = true
+        self.ledgerBound = true
     end
 
     local ns = self:_getNetworkSync()
-    if ns ~= nil then
+    if ns ~= nil and not self.networkSyncBound then
         ns:registerModule(TimeGuard.LEDGER_MODULE, {
             channel      = "TimeGuard_Sync",
             onWriteState = function() return self:_onWriteContextState() end,
             onReadState  = function(arr) self:_onReadContextState(arr) end,
         })
-        bound = true
+        self.networkSyncBound = true
     end
 
     local hub = self:_getSettingsHub()
-    if hub ~= nil then
+    if hub ~= nil and not self.settingsHubBound then
         hub:registerModule(TimeGuard.LEDGER_MODULE, {
             selfPersisted = true,   -- TimeGuard owns self.enabled; hub is a mirror
             adminSettings = {
@@ -395,10 +406,15 @@ function TimeGuard:_bindBedrock()
                 end
             end,
         })
-        bound = true
+        self.settingsHubBound = true
     end
 
-    if bound then
+    -- Only mark bound when ALL available services have been registered.
+    -- If a service isn't available yet, keep retrying on next update tick.
+    local allAvailable = (ledger ~= nil and self.ledgerBound)
+                     and (ns ~= nil and self.networkSyncBound)
+                     and (hub ~= nil and self.settingsHubBound)
+    if allAvailable or (self.ledgerBound and self.networkSyncBound and self.settingsHubBound) then
         self.bedrockBound = true
     end
 end
