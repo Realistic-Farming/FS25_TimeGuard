@@ -101,6 +101,21 @@ function TimeGuardScheduler:_rebuildOrder()
     end)
 end
 
+---@param id string  stable accrual id
+---@return boolean success
+function TimeGuardScheduler:unregisterAccrual(id)
+    if type(id) ~= "string" or id == "" then
+        return false
+    end
+    if self.accruals[id] == nil then
+        return false
+    end
+    self.accruals[id] = nil
+    self:_rebuildOrder()
+    TGLogger.debug("Unregistered accrual '%s'", id)
+    return true
+end
+
 -- =========================================================
 -- Cursor seeding (first observation of an accrual)
 -- =========================================================

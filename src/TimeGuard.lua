@@ -98,11 +98,13 @@ function TimeGuard:onMissionDelete()
         g_messageCenter:unsubscribeAll(self)
         self.messagesBound = false
     end
+    self.scheduler = TimeGuardScheduler.new(self)
     self.seeded       = false
     self.bedrockBound = false
     self.ledgerBound  = false
     self.networkSyncBound = false
     self.settingsHubBound = false
+    self.ledgerRestored = false
     self.synced       = false
 end
 
@@ -341,6 +343,10 @@ end
 
 function TimeGuard:registerAccrual(id, spec)
     return self.scheduler:registerAccrual(id, spec)
+end
+
+function TimeGuard:unregisterAccrual(id)
+    return self.scheduler:unregisterAccrual(id)
 end
 
 -- =========================================================

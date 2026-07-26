@@ -55,11 +55,26 @@ local function onMissionSave()
     timeGuard:save()
 end
 
+-- Save originals before appending so they can be restored on mission delete.
+local _origMission00Load = Mission00.load
+local _origMission00LoadMission00Finished = Mission00.loadMission00Finished
+local _origFSBaseMissionUpdate = FSBaseMission.update
+local _origFSBaseMissionDelete = FSBaseMission.delete
+local _origSaveToXMLFile = FSCareerMissionInfo ~= nil and FSCareerMissionInfo.saveToXMLFile or nil
+
 local function onMissionDelete()
     timeGuard:onMissionDelete()
     getfenv(0)["g_timeGuard"] = nil
     if g_currentMission ~= nil then
         g_currentMission.timeGuard = nil
+    end
+    -- Restore original functions to prevent hook stacking on mission reload.
+    Mission00.load = _origMission00Load
+    Mission00.loadMission00Finished = _origMission00LoadMission00Finished
+    FSBaseMission.update = _origFSBaseMissionUpdate
+    FSBaseMission.delete = _origFSBaseMissionDelete
+    if FSCareerMissionInfo ~= nil then
+        FSCareerMissionInfo.saveToXMLFile = _origSaveToXMLFile
     end
 end
 
