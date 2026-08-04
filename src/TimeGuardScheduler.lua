@@ -26,7 +26,7 @@ TimeGuardScheduler = {}
 local TimeGuardScheduler_mt = Class(TimeGuardScheduler)
 
 TimeGuardScheduler.CADENCES = { day = true, month = true, year = true }
-TimeGuardScheduler.FLOW_CLASSES = { calendar = true, usage = true, event = true }
+TimeGuardScheduler.FLOW_CLASSES = { calendar = true, usage = true, event = true, simulation = true }
 TimeGuardScheduler.FIRST_POLICIES = { prorate = true, full = true, skip = true }
 
 function TimeGuardScheduler.new(clock)
@@ -61,6 +61,7 @@ function TimeGuardScheduler:registerAccrual(id, spec)
     end
     local flowClass = spec.flowClass or "calendar"
     if not TimeGuardScheduler.FLOW_CLASSES[flowClass] then
+        TGLogger.warning("registerAccrual('%s'): unknown flowClass '%s', defaulting to calendar", id, tostring(flowClass))
         flowClass = "calendar"
     end
     local firstPolicy = spec.firstPeriodPolicy or "prorate"
