@@ -32,7 +32,7 @@ local tg = (g_currentMission ~= nil and g_currentMission.timeGuard) or g_timeGua
 ## Public surface
 
 - `tg:subscribeTick(event, id, callback)` — `event` is `"hour"|"day"|"month"|"year"`; callback receives the tick context. Display/read subscribers fire on all peers.
-- `tg:registerAccrual(id, spec)` — `spec = { flowClass = "calendar"|"usage"|"event", firstPeriodPolicy = "prorate"|"full"|"skip", priority = number, onSettle = function(ctx) ... end }`. The callback runs server-only, once per crossed boundary, and does its own money write.
+- `tg:registerAccrual(id, spec)` — `spec = { flowClass = "calendar"|"usage"|"event"|"simulation", firstPeriodPolicy = "prorate"|"full"|"skip", priority = number, onSettle = function(ctx) ... end }`. The callback runs server-only, once per crossed boundary, and does its own money write. `simulation` is for non-money state evolution (day-cadence work that must survive skipped days with no forfeit); nothing that writes money may ever register under it.
 - `tg:normalizePerDay(rate)` — scale a calendar-rated per-day rate by days-per-month. Usage/event flows are not normalized.
 - `tg:getContext()` — the current calendar context (period, year, days-per-month, days elapsed in period, normalization factor, synced flag).
 
