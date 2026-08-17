@@ -1,1 +1,4 @@
 FS25_TimeGuard.zip
+
+# Pre-commit gate deps (tools/test/ - installed by npm, never shipped)
+node_modules/
