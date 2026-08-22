@@ -22,7 +22,7 @@
 -- PERIOD_CHANGED. The scheduler reads them through the clock reference.
 -- =========================================================
 
-TimeGuardScheduler = {}
+TimeGuardScheduler = TimeGuardScheduler or {}
 local TimeGuardScheduler_mt = Class(TimeGuardScheduler)
 
 TimeGuardScheduler.CADENCES = { day = true, month = true, year = true }

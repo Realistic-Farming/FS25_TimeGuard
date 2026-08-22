@@ -8,7 +8,7 @@
 -- are greppable by the "[TimeGuard]" tag.
 -- =========================================================
 
-TGLogger = {}
+TGLogger = TGLogger or {}
 TGLogger.PREFIX = "[TimeGuard] "
 TGLogger.debugEnabled = false
 
