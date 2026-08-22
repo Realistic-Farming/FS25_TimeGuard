@@ -17,7 +17,7 @@
 -- owner's callback; the owner writes its own money.
 -- =========================================================
 
-TimeGuard = {}
+TimeGuard = TimeGuard or {}
 local TimeGuard_mt = Class(TimeGuard)
 
 local DAY_MS = 24 * 60 * 60 * 1000   -- 86,400,000 ms (confirmed vs AbstractMission)
