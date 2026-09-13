@@ -54,10 +54,14 @@ function TimeGuardScheduler:registerAccrual(id, spec)
         return false
     end
 
-    local cadence = spec.cadence or "day"
+    local cadence = spec.cadence
+    if cadence == nil then
+        TGLogger.warning("registerAccrual('%s'): cadence is required (day/month/year), rejecting", id)
+        return false
+    end
     if not TimeGuardScheduler.CADENCES[cadence] then
-        TGLogger.warning("registerAccrual('%s'): unknown cadence '%s', defaulting to day", id, tostring(cadence))
-        cadence = "day"
+        TGLogger.warning("registerAccrual('%s'): unknown cadence '%s', rejecting", id, tostring(cadence))
+        return false
     end
     local flowClass = spec.flowClass or "calendar"
     if not TimeGuardScheduler.FLOW_CLASSES[flowClass] then
