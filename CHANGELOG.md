@@ -13,10 +13,10 @@ the repo's git history and README.
 
 ## [Unreleased]
 
-## [1.0.2.0] - 2026-09-18
+## [1.1.0.0] - 2026-09-18
 
-### Fixed
-- `registerAccrual` now rejects a missing or unknown cadence outright, instead of silently defaulting to a daily cadence. A caller that omitted or mistyped `cadence` could previously have its accrual settle far more often than intended (IMPL-002).
+### Changed
+- **Breaking:** `registerAccrual` now returns `false` and registers nothing when `spec.cadence` is missing or not one of `day`/`month`/`year`. It previously warned and registered a working daily accrual in both cases (IMPL-002). A caller relying on the old silent daily default will stop registering; pass an explicit, valid `cadence` to keep working.
 
 ## [1.0.1.0] - 2026-08-26
 
